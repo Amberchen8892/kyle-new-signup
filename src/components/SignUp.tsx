@@ -3,7 +3,6 @@ import { Paper, Stepper, Typography, Step, StepLabel, Grid } from '@mui/material
 import { createStyles, makeStyles } from '@mui/styles';
 import { Theme } from '@mui/system';
 import { CheckoutProvider } from '../lib/context/CreateAccountContext';
-import CompleteForm from './CompleteForm';
 import CreateAccount from './CreateAccount';
 import VerifyIdentityForm from './VerifyIdentityForm'
 
@@ -105,7 +104,6 @@ function SignUp() {
                       <div>
                         {activeStep === 0 && <CreateAccount setActiveStep={setActiveStep} />}
                         {activeStep === 1 && <VerifyIdentityForm setActiveStep={setActiveStep} />}
-                        {activeStep === 2 && <CompleteForm setActiveStep={setActiveStep} />}
                       </div>
                     </CheckoutProvider>
                     {/* <div className={classes.buttons}>
